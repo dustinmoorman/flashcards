@@ -20,6 +20,7 @@ by dustin moorman
 3. See results
 
 header
+  uin = gets.chomp
   end
 
   def clearConsole
