@@ -8,8 +8,9 @@ require_relative 'clui'
 clui = Clui.new
 
 loop do
-clui.getMenu
-uin = gets.chomp
+  clui.getMenu
+  uin = gets.chomp
+
   case uin
     when '1'
       clui.messenger.push('user chose 1')
