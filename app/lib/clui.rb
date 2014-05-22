@@ -26,6 +26,7 @@ by dustin moorman
 1. Question Management
 2. Take a test
 3. See results
+4. exit
 
 header
   end
