@@ -2,8 +2,16 @@
 #dustinmoorman@gmail.com
 
 require_relative 'os'
+require_relative 'messenger'
 
 class Clui
+  attr_accessor :messenger
+
+  def initialize
+    @messenger = Messenger.new
+  end  
+
+
   def getMenu
     self.clearConsole
     puts <<header

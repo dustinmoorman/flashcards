@@ -9,8 +9,8 @@ clui = Clui.new
 
 loop do
   clui.getMenu
+  puts clui.messenger.getMessage
   uin = gets.chomp
-
   case uin
     when '1'
       clui.messenger.push('user chose 1')
