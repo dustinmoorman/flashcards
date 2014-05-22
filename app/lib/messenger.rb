@@ -9,5 +9,4 @@ class Messenger
   def getMessage
     @message
   end
-
 end
