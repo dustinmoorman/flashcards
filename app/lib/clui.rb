@@ -1,11 +1,11 @@
 class Clui
-	def getMenu
-		puts <<hdr
+  def getMenu
+    puts <<hdr
                                
  .-.       .              .     
 -|-| .-. .-|-. .-.-. .-..-| .-
  ' '-`-`--'' '-`-`-`-'  `-'--'
                                 
 hdr
-	end
+  end
 end
