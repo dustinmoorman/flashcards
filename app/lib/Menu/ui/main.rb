@@ -27,9 +27,9 @@ header
   end
 
   def clearConsole
-    if OS.linux? or OS.mac? or OS.unix?
+    if Osdetect.linux? or Osdetect.mac? or Osdetect.unix?
       system 'clear'
-    elsif OS.windows?
+    elsif Osdetect.windows?
       system 'cls'
     end
   end

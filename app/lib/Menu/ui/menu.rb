@@ -1,3 +1,5 @@
+autoload :OSDetect, '../'
+
 class Menu
-  include OS
+  include OSDetect
 end
