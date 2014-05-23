@@ -1,0 +1,2 @@
+class Main < Menu
+end
