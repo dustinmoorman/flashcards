@@ -3,7 +3,8 @@
 
 #this file will use most of the libraries created
 
-require_relative 'clui'
+autoload :Menu, 'menu/ui/menu'
+
 
 clui = Clui.new
 
