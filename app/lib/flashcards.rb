@@ -4,7 +4,7 @@
 #this file will use most of the libraries created
 
 autoload :Menu, 'menu/ui/menu'
-
+autoload :Main, 'menu/ui/main'
 
 clui = Clui.new
 
