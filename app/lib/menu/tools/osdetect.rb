@@ -1,20 +1,22 @@
 # Osdetect detection module
 #dustinmoorman@gmail.com
 
-module OSDetect
-  def OSDetect.windows?
-    (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
-  end
+module OS
+  class Detect
+    def windows?
+      (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
+    end
 
-  def OSDdetect.mac?
-   (/darwin/ =~ RUBY_PLATFORM) != nil
-  end
+    def mac?
+      (/darwin/ =~ RUBY_PLATFORM) != nil
+    end
 
-  def OSDetect.unix?
-    !OSDetect.windows?
-  end
+    def unix?
+      !self.windows?
+    end
 
-  def OSDetect.linux?
-    OSDetect.unix? and not OSDetect.mac?
+    def linux?
+      self.unix? and not self.mac?
+    end
   end
 end
