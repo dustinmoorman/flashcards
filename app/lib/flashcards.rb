@@ -1,8 +1,6 @@
 #flashcards
 #dustinmoorman@gmail.com
 
-#this file will use most of the libraries created
-
 autoload :Main, 'ui/main'
 
 class Flashcards
