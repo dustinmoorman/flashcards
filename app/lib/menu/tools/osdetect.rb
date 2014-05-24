@@ -1,4 +1,5 @@
 # Osdetect detection module
+#dustinmoorman@gmail.com
 module OSDetect
   def OSDetect.windows?
     (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
