@@ -1,4 +1,5 @@
 autoload :OS, 'menu/tools/os'
+autoload :Messenger, 'menu/tools/messenger'
 autoload :Menu, 'menu/ui/menu'
 
 class Main < Menu
