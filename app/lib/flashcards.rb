@@ -1,7 +1,7 @@
 #flashcards
 #dustinmoorman@gmail.com
 
-autoload :Main, 'ui/main'
+autoload :Main, 'menu/ui/main'
 
 class Flashcards
   def Run
