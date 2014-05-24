@@ -1,4 +1,4 @@
-autoload :OS, 'menu/tools/osdetect'
+autoload :OS, 'menu/tools/os'
 
 class Menu
   include OS
