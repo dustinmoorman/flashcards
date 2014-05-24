@@ -6,7 +6,6 @@ autoload :Main, 'menu/ui/main'
 class Flashcards
   def Run
     main = Main.new
-
     loop do
       main.getMenu
       puts main.messenger.getMessage
