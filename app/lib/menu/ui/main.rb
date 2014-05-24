@@ -1,3 +1,4 @@
+autoload :OS, 'menu/tools/os'
 autoload :Menu, 'menu/ui/menu'
 
 class Main < Menu
@@ -5,6 +6,7 @@ class Main < Menu
 
   def initialize
     @messenger = Messenger.new
+    @OSDetect = OS::Detect.new
   end
 
   def getMenu
@@ -27,9 +29,9 @@ header
   end
 
   def clearConsole
-    if Osdetect.linux? or Osdetect.mac? or Osdetect.unix?
+    if @OSDetect.linux? or @OSDetect.mac? or @OSDetect.unix?
       system 'clear'
-    elsif Osdetect.windows?
+    elsif @OSDetect.windows?
       system 'cls'
     end
   end
