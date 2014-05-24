@@ -5,7 +5,6 @@ autoload :Main, 'ui/main'
 
 class Flashcards
   def Run
-
     clui = Main.new
 
     loop do
