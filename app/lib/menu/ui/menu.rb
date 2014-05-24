@@ -1,5 +1,5 @@
-autoload :OSDetect, '../../menu/tools/osdetect'
+autoload :OS, 'menu/tools/osdetect'
 
 class Menu
-  include OSDetect
+  include OS
 end
