@@ -6,6 +6,7 @@ class Main < Menu
     @nav_opts['2'] = 'Take a test'
     @nav_opts['3'] = 'See results'
     @nav_opts['4'] = 'exit'
+    @location = 'main2'
   end
   def getMenu
     self.clearConsole
