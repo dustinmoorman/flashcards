@@ -7,11 +7,4 @@ class Qm < Menu
     @nav_opts['3'] = 'Remove Question'
     @nav_opts['4'] = 'back'
   end
-  def getMenu
-    self.clearConsole
-    puts self.getHeader + @location
-    @nav_opts.each do |key, opt|
-      puts "#{key}. #{opt}"
-    end
-  end
 end
