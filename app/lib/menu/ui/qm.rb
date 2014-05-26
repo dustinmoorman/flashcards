@@ -13,7 +13,5 @@ class Qm < Menu
     @nav_opts.each do |key, opt|
       puts "#{key}. #{opt}"
     end
-
-    return output
   end
 end
