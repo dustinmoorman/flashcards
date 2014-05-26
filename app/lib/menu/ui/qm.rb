@@ -1,24 +1,19 @@
 autoload :Menu, 'menu/ui/menu'
 
 class Qm < Menu
+  def setOpts
+    @nav_opts['1'] = 'List Questions'
+    @nav_opts['2'] = 'Add Question'
+    @nav_opts['3'] = 'Remove Question'
+    @nav_opts['4'] = 'back'
+  end
   def getMenu
     self.clearConsole
-    puts <<header
+    puts self.getHeader + @location
+    @nav_opts.each do |key, opt|
+      puts "#{key}. #{opt}"
+    end
 
- .-.       .              .
--|-| .-. .-|-. .-.-. .-..-| .-
- ' '-`-`--'' '-`-`-`-'  `-'--'
-by dustin moorman
-
-===============================
-
-  :: Question Management
-
-1. List Questions
-2. Add Question
-3. Remove Question
-4. back
-
-header
+    return output
   end
 end
