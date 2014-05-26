@@ -2,20 +2,20 @@
 #dustinmoorman@gmail.com
 
 module OS
-  class Detect
-    def windows?
+  module Detect
+    def self.windows?
       (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
     end
 
-    def mac?
+    def self.mac?
       (/darwin/ =~ RUBY_PLATFORM) != nil
     end
 
-    def unix?
+    def self.unix?
       !self.windows?
     end
 
-    def linux?
+    def self.linux?
       self.unix? and not self.mac?
     end
   end
