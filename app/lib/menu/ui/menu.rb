@@ -16,6 +16,14 @@ class Menu
       system 'cls'
     end
   end
+  def getMenu
+    self.clearConsole
+    self.setOpts
+    print self.getHeader
+    @nav_opts.each do |key, opt|
+      puts "#{key}. #{opt}"
+    end
+  end
   def getHeader
   	header = <<hdr
 
@@ -27,7 +35,7 @@ by dustin moorman
 ===============================
 
   :: #{@location}
-  
+
 hdr
     return header
   end
