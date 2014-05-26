@@ -2,10 +2,13 @@
 #dustinmoorman@gmail.com
 
 autoload :Main, 'menu/ui/main'
+autoload :Qm, 'menu/ui/qm'
 
 class Flashcards
   def initialize
     @main = Main.new
+    @em   = Em.new
+
   end
   def Run
     loop do
@@ -14,7 +17,7 @@ class Flashcards
       uin = gets.chomp
       case uin
         when '1'
-          @main.messenger.push('user chose 1')
+          @em.getMenu
         when '2'
           @main.messenger.push('user chose 2')
         when '3'
