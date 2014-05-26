@@ -1,24 +1,10 @@
 autoload :Menu, 'menu/ui/menu'
 
 class Em < Menu
-  def getMenu
-    self.clearConsole
-    puts <<header
-
- .-.       .              .
--|-| .-. .-|-. .-.-. .-..-| .-
- ' '-`-`--'' '-`-`-`-'  `-'--'
-by dustin moorman
-
-===============================
-
-  :: Exam Management
-
-1. List Exams
-2. Add Exam
-3. Remove Exam
-4. back
-
-header
+  def setOpts
+    @nav_opts['1'] = 'List Exams'
+    @nav_opts['2'] = 'Add Exam'
+    @nav_opts['3'] = 'Remove Exam'
+    @nav_opts['4'] = 'back'
   end
 end
