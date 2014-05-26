@@ -6,14 +6,6 @@ class Main < Menu
     @nav_opts['2'] = 'Take a test'
     @nav_opts['3'] = 'See results'
     @nav_opts['4'] = 'exit'
-    @location = 'main2'
-  end
-  def getMenu
-    self.clearConsole
-    self.setOpts
-    print self.getHeader
-    @nav_opts.each do |key, opt|
-      puts "#{key}. #{opt}"
-    end
+    @location = 'Main'
   end
 end
