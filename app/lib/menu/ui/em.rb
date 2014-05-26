@@ -6,5 +6,6 @@ class Em < Menu
     @nav_opts['2'] = 'Add Exam'
     @nav_opts['3'] = 'Remove Exam'
     @nav_opts['4'] = 'back'
+    @location = 'Exam Management'
   end
 end
