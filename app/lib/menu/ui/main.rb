@@ -1,13 +1,6 @@
-autoload :Messenger, 'menu/tools/messenger'
 autoload :Menu, 'menu/ui/menu'
 
 class Main < Menu
-  attr_accessor :messenger
-
-  def initialize
-    @messenger = Messenger.new
-  end
-
   def getMenu
     self.clearConsole
     puts <<header
