@@ -19,7 +19,9 @@ class Main < Menu
  ' '-`-`--'' '-`-`-`-'  `-'--'
 by dustin moorman
 
-***************************************
+===============================
+
+  :: Main
 
 1. Question Management
 2. Take a test
