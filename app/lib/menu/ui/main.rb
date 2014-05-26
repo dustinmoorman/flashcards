@@ -9,6 +9,8 @@ class Main < Menu
   end
   def getMenu
     self.clearConsole
+    self.setOpts
+    print self.getHeader
     @nav_opts.each do |key, opt|
       puts "#{key}. #{opt}"
     end
