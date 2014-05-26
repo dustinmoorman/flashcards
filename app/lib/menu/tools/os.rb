@@ -1,4 +1,4 @@
-# Osdetect detection module
+# OS Utilities
 #dustinmoorman@gmail.com
 
 module OS
