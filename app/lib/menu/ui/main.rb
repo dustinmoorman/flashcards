@@ -6,7 +6,6 @@ class Main < Menu
 
   def initialize
     @messenger = Messenger.new
-    #@OSDetect = OS::Detect.new
   end
 
   def getMenu
