@@ -2,7 +2,7 @@
 #dustinmoorman@gmail.com
 
 autoload :Main, 'menu/ui/main'
-autoload :Qm, 'menu/ui/qm'
+autoload :Em, 'menu/ui/em'
 
 class Flashcards
   def initialize
