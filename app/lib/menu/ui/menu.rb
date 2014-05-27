@@ -24,19 +24,19 @@ class Menu
       @nav_opts.each do |key, opt|
         puts "#{key}. #{opt}"
       end
-      puts @main.messenger.getMessage
+      puts @messenger.getMessage
       uin = gets.chomp
       case uin
         when '1'
           @em.getMenu
         when '2'
-          @main.messenger.push('user chose 2')
+          @messenger.push('user chose 2')
         when '3'
-          @main.messenger.push('user chose 3')
+          @messenger.push('user chose 3')
         when '4'
           break
         else
-          @main.messenger.push('try again')
+          @messenger.push('try again')
       end
     end
 
