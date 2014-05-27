@@ -21,25 +21,28 @@ class Menu
       self.clearConsole
       self.setOpts
       print self.getHeader
-      @nav_opts.each do |key, opt|
-        puts "#{key}. #{opt}"
+      pos = 1
+      commands = Hash.new
+      @nav_opts.each do |desc, iMenu|
+        puts pos.to_s + " #{desc}"
+        commands[pos] = iMenu
+        pos += 1
       end
       puts @messenger.getMessage
       uin = gets.chomp
       case uin
         when '1'
-          @em.getMenu
+          commands[1].getMenu
         when '2'
-          @messenger.push('user chose 2')
+          commands[2].getMenu
         when '3'
-          @messenger.push('user chose 3')
+          commands[3].getMenu
         when '4'
           break
         else
           @messenger.push('try again')
       end
     end
-
   end
   def getHeader
   	header = <<hdr
