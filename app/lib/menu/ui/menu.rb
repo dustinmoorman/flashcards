@@ -23,9 +23,9 @@ class Menu
       print self.getHeader
       pos = 1
       commands = Hash.new
-      @nav_opts.each do |desc, iMenu|
+      @nav_opts.each do |desc, concreteMenu|
         puts pos.to_s + " #{desc}"
-        commands[pos] = iMenu
+        commands[pos] = concreteMenu
         pos += 1
       end
       puts @messenger.getMessage
