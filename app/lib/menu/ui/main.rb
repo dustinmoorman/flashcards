@@ -1,12 +1,12 @@
 autoload :Menu, 'menu/ui/menu'
-autoload :Em, 'menu/ui/em'
+autoload :Exam, 'menu/ui/exam'
 
 class Main < Menu
   def setOpts
-    @nav_opts['Manage tests'] = Em.new
-    @nav_opts['Take a test'] = Em.new #pluggin for now
-    @nav_opts['See results'] = Em.new #pluggin for now
-    @nav_opts['exit'] = Em.new #pluggin for now
+    @nav_opts['Manage exams'] = Exam::Manage.new
+    @nav_opts['Take an exam'] = Exam::Take.new 
+    @nav_opts['See results'] = Exam::Results.new
+    @nav_opts['exit'] = self.exit
     @location = 'Main'
   end
 end
