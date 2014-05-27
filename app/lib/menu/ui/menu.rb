@@ -17,12 +17,29 @@ class Menu
     end
   end
   def getMenu
-    self.clearConsole
-    self.setOpts
-    print self.getHeader
-    @nav_opts.each do |key, opt|
-      puts "#{key}. #{opt}"
+  	loop do
+      self.clearConsole
+      self.setOpts
+      print self.getHeader
+      @nav_opts.each do |key, opt|
+        puts "#{key}. #{opt}"
+      end
+      puts @main.messenger.getMessage
+      uin = gets.chomp
+      case uin
+        when '1'
+          @em.getMenu
+        when '2'
+          @main.messenger.push('user chose 2')
+        when '3'
+          @main.messenger.push('user chose 3')
+        when '4'
+          break
+        else
+          @main.messenger.push('try again')
+      end
     end
+
   end
   def getHeader
   	header = <<hdr
