@@ -8,9 +8,9 @@ class Main < Menu
   end
   def setOpts
     @nav_opts['Manage tests'] = @Em
-    @nav_opts['2'] = 'Take a test'
-    @nav_opts['3'] = 'See results'
-    @nav_opts['4'] = 'exit'
+    @nav_opts['Take a test'] = @Em #pluggin for now
+    @nav_opts['See results'] = @Em #pluggin for now
+    @nav_opts['exit'] = @Em #pluggin for now
     @location = 'Main'
   end
 end
