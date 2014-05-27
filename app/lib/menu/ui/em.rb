@@ -2,10 +2,10 @@ autoload :Menu, 'menu/ui/menu'
 
 class Em < Menu
   def setOpts
-    @nav_opts['1'] = 'List Exams'
-    @nav_opts['2'] = 'Add Exam'
-    @nav_opts['3'] = 'Remove Exam'
-    @nav_opts['4'] = 'back'
+    @nav_opts['List Exams'] = self #str8 pluqqin 
+    @nav_opts['Add Exam'] = self #str8 pluqqin
+    @nav_opts['Remove Exam'] = self 
+    @nav_opts['back'] = self
     @location = 'Exam Management'
   end
 end
