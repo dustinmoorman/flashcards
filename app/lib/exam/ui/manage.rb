@@ -1,0 +1,2 @@
+class Manage
+end
