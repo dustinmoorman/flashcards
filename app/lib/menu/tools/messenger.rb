@@ -7,6 +7,6 @@ class Messenger
   end
 
   def getMessage
-    @message
+    return @message
   end
 end
