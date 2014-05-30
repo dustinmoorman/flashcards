@@ -1,7 +1,7 @@
 #flashcards
 #dustinmoorman@gmail.com
 
-autoload :Main, 'menu/ui/main'
+require_relative 'menu/ui/main'
 
 class Flashcards
   def initialize
