@@ -1,7 +1,4 @@
-autoload :Menu, 'menu/ui/menu'
-autoload :Manage, 'exam/ui/manage'
-autoload :Take, 'exam/ui/take'
-autoload :Results, 'exam/ui/results'
+require_relative 'menu'
 
 class Main < Menu
   def setOpts
