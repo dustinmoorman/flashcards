@@ -1,5 +1,5 @@
-autoload :OS, 'menu/tools/os'
-autoload :Messenger, 'menu/tools/messenger'
+require_relative '../tools/os'
+require_relative '../tools/messenger'
 
 class Menu
   include OS
