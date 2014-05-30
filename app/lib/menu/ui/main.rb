@@ -5,9 +5,9 @@ autoload :Results, 'exam/ui/results'
 
 class Main < Menu
   def setOpts
-    @nav_opts['Manage exams'] = Exam::Manage.new
-    @nav_opts['Take an exam'] = Exam::Take.new 
-    @nav_opts['See results'] = Exam::Results.new
+    @nav_opts['Manage exams'] = self
+    @nav_opts['Take an exam'] = self
+    @nav_opts['See results'] = self
     @nav_opts['exit'] = self.exit
     @location = 'Main'
   end
