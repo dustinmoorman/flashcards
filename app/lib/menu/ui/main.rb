@@ -8,7 +8,7 @@ class Main < Menu
     @nav_opts['Manage exams'] = self
     @nav_opts['Take an exam'] = self
     @nav_opts['See results'] = self
-    @nav_opts['exit'] = self.exit
+    @nav_opts['exit'] = self
     @location = 'Main'
   end
 end
