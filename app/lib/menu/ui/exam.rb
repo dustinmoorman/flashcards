@@ -1,4 +1,4 @@
-autoload :Menu, 'menu/ui/menu'
+require_relative 'menu/ui/menu'
 
 module Mgmt
   class Exam < Menu
