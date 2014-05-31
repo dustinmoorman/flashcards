@@ -1,6 +1,6 @@
 require_relative 'menu'
 
-class Main < Menu
+class Main < Ui::Menu
   def setOpts
     @nav_opts['Manage exams'] = self
     @nav_opts['Take an exam'] = self
