@@ -1,7 +1,7 @@
 require_relative '../tools/os'
 require_relative '../tools/messenger'
 
-class Ui
+module Ui
   class Menu
     include OS
     attr_accessor :messenger
