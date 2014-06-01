@@ -33,19 +33,12 @@ module Ui
 	self.processInput(gets.chomp, commands)
       end
     end
-    def processInput(uin, commands)
-      case uin
-        when '1'
-	  commands[1].getMenu
-	when '2'
-	  commands[2].getMenu
-	when '3'
-	  commands[3].getMenu
-	when '4'
-	  self.exit
-	else
+    def processInput(uin, commands) 
+      if commands.key? uin
+        commands[uin].getMenu
+      else
         @messenger.push('try again')
-      end	      
+      end
     end
     def exit
       exit!
