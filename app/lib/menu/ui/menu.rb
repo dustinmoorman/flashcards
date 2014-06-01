@@ -48,7 +48,7 @@ module Ui
       end	      
     end
     def exit
-      exit
+      exit!
     end
     def getHeader
       header = <<hdr
