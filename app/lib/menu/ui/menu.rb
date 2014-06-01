@@ -33,7 +33,7 @@ module Ui
 	self.processInput(gets.chomp, commands)
       end
     end
-    def processInput(uin)
+    def processInput(uin, commands)
       case uin
         when '1'
 	  commands[1].getMenu
