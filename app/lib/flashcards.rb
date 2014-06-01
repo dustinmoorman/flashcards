@@ -1,6 +1,3 @@
-#flashcards
-#dustinmoorman@gmail.com
-
 require_relative 'menu/ui/main'
 
 class Flashcards
