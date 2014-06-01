@@ -42,10 +42,13 @@ module Ui
 	when '3'
 	  commands[3].getMenu
 	when '4'
-	  break
+	  self.exit
 	else
         @messenger.push('try again')
       end	      
+    end
+    def exit
+      exit
     end
     def getHeader
       header = <<hdr
