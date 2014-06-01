@@ -26,7 +26,7 @@ module Ui
         commands = Hash.new
         @nav_opts.each do |desc, concreteMenu|
           puts pos.to_s + " #{desc}"
-          commands[pos] = concreteMenu
+          commands[pos.to_s] = concreteMenu
           pos += 1
         end
         puts @messenger.getMessage        
