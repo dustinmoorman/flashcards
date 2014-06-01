@@ -29,21 +29,23 @@ module Ui
           commands[pos] = concreteMenu
           pos += 1
         end
-        puts @messenger.getMessage
-        uin = gets.chomp
-        case uin
-          when '1'
-            commands[1].getMenu
-          when '2'
-            commands[2].getMenu
-          when '3'
-            commands[3].getMenu
-          when '4'
-            break
-          else
-            @messenger.push('try again')
-        end
+        puts @messenger.getMessage        
+	self.processInput(gets.chomp, commands)
       end
+    end
+    def processInput(uin)
+      case uin
+        when '1'
+	  commands[1].getMenu
+	when '2'
+	  commands[2].getMenu
+	when '3'
+	  commands[3].getMenu
+	when '4'
+	  break
+	else
+        @messenger.push('try again')
+      end	      
     end
     def getHeader
       header = <<hdr
