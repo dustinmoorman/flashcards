@@ -1,6 +1,3 @@
-# OS Utilities
-#dustinmoorman@gmail.com
-
 module OS
   module Detect
     def self.windows?
