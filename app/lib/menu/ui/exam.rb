@@ -1,4 +1,4 @@
-require_relative 'menu/ui/menu'
+require_relative 'menu'
 
 module Mgmt
   class Exam < Menu
