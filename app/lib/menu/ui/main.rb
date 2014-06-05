@@ -8,7 +8,7 @@ class Main < Ui::Menu
     @nav_opts['Manage exams'] = Exam::Ui::Manage.new
     @nav_opts['Take an exam'] = Exam::Ui::Take.new
     @nav_opts['See results'] = Exam::Ui::Results.new
-    @nav_opts['exit'] = self.exit
+    @nav_opts['exit'] = self #@TODO: tosser, this calls it. Need an exit flag
     @location = 'Main'
   end
 end
