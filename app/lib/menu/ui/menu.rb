@@ -30,7 +30,7 @@ module Ui
           pos += 1
         end
         puts @messenger.getMessage        
-	self.processInput(gets.chomp, commands)
+	      self.processInput(gets.chomp, commands)
       end
     end
     def processInput(uin, commands) 
