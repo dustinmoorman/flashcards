@@ -1,7 +1,7 @@
 require 'menu/ui/menu'
 
 class Manage < Ui::Menu
-  def self.setOpts
+  def setOpts
     @nav_opts['List Exams'] = self #str8 pluqqin
     @nav_opts['Add Exam'] = self #str8 pluqqin
     @nav_opts['Remove Exam'] = self
