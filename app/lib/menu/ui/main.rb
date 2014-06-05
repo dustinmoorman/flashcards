@@ -3,7 +3,7 @@ require 'exam/ui/manage'
 require 'exam/ui/take'
 require 'exam/ui/results'
 
-class Main < Ui::Menu
+class Main < Menu::Ui::Menu
   def setOpts
     @nav_opts['Manage exams'] = Exam::Ui::Manage.new
     @nav_opts['Take an exam'] = Exam::Ui::Take.new
