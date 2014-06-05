@@ -35,7 +35,14 @@ module Ui
     end
     def processInput(uin, commands) 
       if commands.key? uin
-        commands[uin].getMenu
+        if commands[uin].respond_to? 'getMenu'
+          # @historian.push(commands[uin]) @TODO implement
+          commands[uin].getMenu
+        elsif commands[uin] == 'exit'
+          self.exit
+        elsif commands[uin] == 'back'
+          # @historian.back @TODO implement
+        end
       else
         @messenger.push('try again')
       end
