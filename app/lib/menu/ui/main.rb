@@ -1,4 +1,4 @@
-require 'menu'
+require 'menu/ui/main'
 require 'exam/ui/manage'
 require 'exam/ui/take'
 require 'exam/ui/results'
