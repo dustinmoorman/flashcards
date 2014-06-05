@@ -2,7 +2,7 @@ require 'menu/ui/menu'
 
 module Exam
   module Ui
-    class Results < ::Ui::Menu
+    class Results < ::Menu::Ui::Menu
       def setOpts
         @nav_opts['Select Exam'] = self #str8 pluqgin
         @nav_opts['back'] = self
