@@ -6,7 +6,7 @@ module Ui
     include OS
     attr_accessor :messenger
     def initialize
-      @messenger = Messenger.new
+      @messenger = ::Menu::Tools::Messenger.new
       @nav_opts = Hash.new
       @location = 'Menu'
     end
