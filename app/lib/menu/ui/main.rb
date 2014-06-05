@@ -1,4 +1,7 @@
-require_relative 'menu'
+require 'menu'
+require 'exam/ui/manage'
+require 'exam/ui/take'
+require 'exam/ui/results'
 
 class Main < Ui::Menu
   def setOpts
