@@ -20,7 +20,10 @@ if (isset($argv[1])) {
 		}
 
 		if (count($questions) > 0) {
-			print_r($questions);
+			
+			$Exam = new \Flashcards\Exam($questions);
+			$Exam->present();
+
 		} else {
 			echo "No questions provided\r\n";
 		}
