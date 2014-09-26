@@ -1,4 +1,4 @@
 flashcards
 ==========
 
-Simple command line exam / flash card study tool.
+Simple command line flash card study tool.
