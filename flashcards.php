@@ -1,6 +1,6 @@
 <?php
 
-if(isset($argv[1])) {
+if (isset($argv[1])) {
 	if(file_exists($argv[1])) {
 		
 	}
