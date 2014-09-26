@@ -10,7 +10,7 @@ if (isset($argv[1])) {
 		}
 	
 	} else {
-		echo "Invalid question file\r\n";
+		echo "Invalid question file.\r\n";
 	}
 } else {
 	echo "No questions provided.\r\n";
