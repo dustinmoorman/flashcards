@@ -17,7 +17,7 @@ class Exam
 			shuffle($this->_questions);
 			system('clear');
 			foreach ($this->_questions as $question) {
-				echo $question['question'];
+				echo $question['question'] . "\r\n\r\n";
 			}
 		}
 	}
