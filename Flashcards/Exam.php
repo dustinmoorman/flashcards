@@ -16,8 +16,9 @@ class Exam
 		if (count($this->_questions) > 0) {
 			shuffle($this->_questions);
 			system('clear');
+			$questionNumber = 1;
 			foreach ($this->_questions as $question) {
-				echo $question['question'] . "\r\n\r\n";
+				echo $questionNumber . '. ' . $question['question'] . "\r\n\r\n";
 			}
 		}
 	}
