@@ -15,6 +15,10 @@ class Exam
 	{
 		if (count($this->_questions) > 0) {
 			shuffle($this->_questions);
+			system('clear');
+			foreach ($this->_questions as $question) {
+				echo $question['question'];
+			}
 		}
 	}
 }
