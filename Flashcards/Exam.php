@@ -19,6 +19,8 @@ class Exam
 			$questionNumber = 1;
 			foreach ($this->_questions as $question) {
 				echo $questionNumber . '. ' . $question['question'] . "\r\n\r\n";
+
+				$questionNumber++;
 			}
 		}
 	}
