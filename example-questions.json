@@ -6,7 +6,7 @@
 	},
 	"1":{
 		"question": "What is the name of the company that maintains PHP?",
-		"answer":"Zend",
+		"answer": "Zend",
 		"incorrect": ["IBM","Engine Yard","eBay"]
 	}
 }
