@@ -5,7 +5,7 @@
 		"incorrect": ["C++","D","Erlang"]
 	},
 	"1":{
-		"question":"What is the name of the company that maintains PHP?",
+		"question": "What is the name of the company that maintains PHP?",
 		"answer":"Zend",
 		"incorrect": ["IBM","Engine Yard","eBay"]
 	}
