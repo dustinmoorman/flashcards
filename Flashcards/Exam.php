@@ -21,8 +21,10 @@ class Exam
 				echo $questionNumber . '. ' . $question['question'] . "\r\n";
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				shuffle($choices);
+				$i = 1;
 				foreach ($choices as $choice) {
-					echo "\t$choice\r\n";
+					echo "\t$i.$choice\r\n";
+					$i++;
 				}
 				echo "\r\n";
 				$questionNumber++;
