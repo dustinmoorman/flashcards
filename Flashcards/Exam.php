@@ -18,8 +18,13 @@ class Exam
 			system('clear');
 			$questionNumber = 1;
 			foreach ($this->_questions as $question) {
-				echo $questionNumber . '. ' . $question['question'] . "\r\n\r\n";
-
+				echo $questionNumber . '. ' . $question['question'] . "\r\n";
+				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
+				shuffle($choices);
+				foreach ($choices as $choice) {
+					echo "\t$choice";
+				}
+				echo "\r\n";
 				$questionNumber++;
 			}
 		}
