@@ -1,5 +1,5 @@
 {
-	"0":{
+	"0": {
 		"question": "What is the programming language this application is written in?",
 		"answer": "PHP",
 		"incorrect": ["C++","D","Erlang"]
