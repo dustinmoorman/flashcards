@@ -26,6 +26,15 @@ class Exam
 					echo "\t$i.$choice\r\n";
 					$i++;
 				}
+				
+				$stdin = fopen('php://stdin', 'r');
+				$choice = fgets($stdin);
+
+				if ($choice == $answer) {
+
+				} else {
+
+				}	
 				echo "\r\n";
 				$questionNumber++;
 			}
