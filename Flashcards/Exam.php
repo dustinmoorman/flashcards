@@ -22,21 +22,23 @@ class Exam
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				$this->shuffleAnswers($choices);
 				$i = 1;
-				foreach ($choices as $choice) {
-					echo "\t$i.$choice\r\n";
-					$i++;
-					
+				foreach ($choices as $k => $choice) {
+					echo "\t$i.$choice \r\n"; 
+					if($k === 'answer') $answer_choice = $i;
+					$i++;	
 				}
 				
 				$stdin = fopen('php://stdin', 'r');
 				$choice = fgets($stdin);
 
-				if ($choice == $answer) {
-
+				if ($choice == $answer_choice) {
+					echo "\r\nCorrect!\r\n";
 				} else {
-
+					echo "\r\nNope.";	
 				}	
-				echo "\r\n";
+
+				sleep(2);
+				system('clear');
 				$questionNumber++;
 			}
 		}
