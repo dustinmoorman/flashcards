@@ -22,9 +22,11 @@ class Exam
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				shuffle($choices);
 				$i = 1;
+				var_dump($choices);
 				foreach ($choices as $choice) {
 					echo "\t$i.$choice\r\n";
 					$i++;
+					
 				}
 				
 				$stdin = fopen('php://stdin', 'r');
@@ -39,5 +41,18 @@ class Exam
 				$questionNumber++;
 			}
 		}
+	}
+	
+	protected function shuffleAnswers($choices)
+	{
+		if(!is_array($choices)) return $choices;
+
+		$keys = array_keys($choices);
+		shuffle($keys);
+		$shuffled = array();
+		foreach ($keys as $key) {
+			$shuffled[$key] = $choices[$key];
+		}
+		return $shuffled;
 	}
 }
