@@ -20,9 +20,9 @@ class Exam
 			foreach ($this->_questions as $question) {
 				echo $questionNumber . '. ' . $question['question'] . "\r\n";
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
-				$this->shuffleAnswers($choices);
+				$shuffledChoices = $this->shuffleAnswers($choices);
 				$i = 1;
-				foreach ($choices as $k => $choice) {
+				foreach ($shuffledChoices as $k => $choice) {
 					echo "\t$i.$choice \r\n"; 
 					if($k === 'answer') $answer_choice = $i;
 					$i++;	
