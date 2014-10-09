@@ -37,7 +37,7 @@ class Exam
 					echo "\r\nNope.";	
 				}	
 
-				sleep(2);
+				sleep(1);
 				system('clear');
 				$questionNumber++;
 			}
