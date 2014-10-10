@@ -18,7 +18,7 @@ class Exam
 			system('clear');
 			$questionNumber = 1;
 			foreach ($this->_questions as $question) {
-				echo $questionNumber . '. ' . $question['question'] . "\r\n";
+				echo '[' .$questionNumber . '/' . count($this->_questions) . '] ' . $question['question'] . "\r\n";
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				$shuffledChoices = $this->shuffleAnswers($choices);
 				$i = 1;
