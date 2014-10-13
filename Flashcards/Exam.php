@@ -35,7 +35,7 @@ class Exam
 					echo "\r\nCorrect!\r\n";
 				} else {
 					echo "\r\nNope. The answer is:";
-					echo "\r\n" . $question['answer'];
+					echo "\r\n" . $question['answer'] . "\r\n";
 				}	
 				sleep(2);
 				system('clear');
