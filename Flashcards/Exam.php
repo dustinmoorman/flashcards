@@ -33,13 +33,11 @@ class Exam
 
 				if ($choice == $answer_choice) {
 					echo "\r\nCorrect!\r\n";
-					$pauseLength = 0.75;
 				} else {
 					echo "\r\nNope. The answer is:";
 					echo "\r\n" . $question['answer'];
-					$pauseLength = 2;
 				}	
-				sleep($pauseLength);
+				sleep(2);
 				system('clear');
 				$questionNumber++;
 			}
