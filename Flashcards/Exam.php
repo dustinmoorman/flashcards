@@ -37,7 +37,13 @@ class Exam
 					echo "\r\nNope. The answer is:";
 					echo "\r\n" . $question['answer'] . "\r\n";
 				}	
-				sleep(2);
+				
+				if (isset($question['explain'])) {
+					echo "\r\n" . $question['explain'] . "\r\n";
+					sleep(3);
+				} else {
+					sleep(2);
+				}
 				system('clear');
 				$questionNumber++;
 			}
