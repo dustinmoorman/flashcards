@@ -24,14 +24,14 @@ class Exam
 				$answerNumber = 1;
 				foreach ($shuffledChoices as $k => $choice) {
 					echo "\t$i.$choice \r\n"; 
-					if ($k === 'answer') $answer_choice = $answerNumber;
+					if ($k === 'answer') $answerChoice = $answerNumber;
 					$answerNumber++;	
 				}
 				
 				$stdin = fopen('php://stdin', 'r');
 				$choice = fgets($stdin);
 
-				if ($choice == $answer_choice) {
+				if ($choice == $answerChoice) {
 					echo "\r\nCorrect!\r\n";
 				} else {
 					echo "\r\nNope. The answer is:";
