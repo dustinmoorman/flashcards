@@ -54,7 +54,7 @@ class Exam
 	
 	protected function shuffleAnswers($choices)
 	{
-		if(!is_array($choices)) return $choices;
+		if (!is_array($choices)) return $choices;
 
 		$keys = array_keys($choices);
 		shuffle($keys);
