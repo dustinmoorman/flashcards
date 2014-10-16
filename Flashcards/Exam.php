@@ -21,11 +21,11 @@ class Exam
 				echo '[' .$questionNumber . '/' . count($this->_questions) . '] ' . $question['question'] . "\r\n";
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				$shuffledChoices = $this->shuffleAnswers($choices);
-				$i = 1;
+				$answerNumber = 1;
 				foreach ($shuffledChoices as $k => $choice) {
 					echo "\t$i.$choice \r\n"; 
-					if ($k === 'answer') $answer_choice = $i;
-					$i++;	
+					if ($k === 'answer') $answer_choice = $answerNumber;
+					$answerNumber++;	
 				}
 				
 				$stdin = fopen('php://stdin', 'r');
