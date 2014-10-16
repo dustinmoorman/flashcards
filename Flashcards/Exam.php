@@ -24,7 +24,7 @@ class Exam
 				$i = 1;
 				foreach ($shuffledChoices as $k => $choice) {
 					echo "\t$i.$choice \r\n"; 
-					if($k === 'answer') $answer_choice = $i;
+					if ($k === 'answer') $answer_choice = $i;
 					$i++;	
 				}
 				
