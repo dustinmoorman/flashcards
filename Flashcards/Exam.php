@@ -23,7 +23,7 @@ class Exam
 				$shuffledChoices = $this->shuffleAnswers($choices);
 				$answerNumber = 1;
 				foreach ($shuffledChoices as $k => $choice) {
-					echo "\t$i.$choice \r\n"; 
+					echo "\t$answerNumber.$choice \r\n"; 
 					if ($k === 'answer') $answerChoice = $answerNumber;
 					$answerNumber++;	
 				}
