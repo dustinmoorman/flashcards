@@ -4,7 +4,7 @@ namespace Flashcards\Exam;
 
 class ScoreKeep 
 {
-	protected $_questionCount;
+	protected $_questionCount = 0;
 	protected $_answeredCorrectlyCount = 0;
 	protected $_answeredIncorrectly = array();
 
@@ -18,8 +18,8 @@ class ScoreKeep
 		$this->_answeredIncorrectly[] = $question;
 	}
 
-	public function setQuestionCount($questionCount)
+	public function questionAttempted()
 	{
-		$this->_questionCount = $questionCount;
+		$this->_questionCount++;
 	}
 }
