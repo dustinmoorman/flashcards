@@ -27,9 +27,12 @@ class Exam
 					if ($k === 'answer') $answerChoice = $answerNumber;
 					$answerNumber++;	
 				}
-				
-				$stdin = fopen('php://stdin', 'r');
-				$choice = fgets($stdin);
+
+				$choice = '';
+				do {	
+					$stdin = fopen('php://stdin', 'r');
+					$choice = fgets($stdin);
+				} while (strlen($choice) < 2);
 
 				if ($choice == $answerChoice) {
 					echo "\r\nCorrect!\r\n";
