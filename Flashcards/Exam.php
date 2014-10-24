@@ -57,8 +57,7 @@ class Exam
 				$this->clear();
 				$questionNumber++;
 			}
-			echo "\r\n And... you're done!\r\n";
-			sleep(2);
+			$this->quit();
 		}
 	}
 
