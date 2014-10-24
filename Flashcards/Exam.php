@@ -59,6 +59,12 @@ class Exam
 			sleep(2);
 		}
 	}
+
+	protected function getUserInput()
+	{
+		$stdin = fopen('php://stdin', 'r');
+		return fgets($stdin);
+	}
 	
 	protected function shuffleAnswers($choices)
 	{
