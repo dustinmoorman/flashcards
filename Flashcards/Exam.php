@@ -35,11 +35,14 @@ class Exam
 				do {	
 					$choice = $this->getUserInput();
 				} while (strlen($choice) < 2);
-
-				if ($choice == $answerChoice) {
+				
+				if (trim($choice) == 'q') {
+					$this->quit();
+				} else if ($choice == $answerChoice) {
 					echo "\r\nCorrect!\r\n";
 					$this->_scoreKeep->correct();
 				} else {
+					echo "\r\n you chose '" . print_r($choice,1) ."'" ;
 					echo "\r\nNope. The answer is:";
 					echo "\r\n" . $question['answer'] . "\r\n";
 					$this->_scoreKeep->wrong($question);
