@@ -5,17 +5,20 @@ namespace Flashcards;
 class Exam
 {
 	protected $_questions = [];
+	protected $_scoreKeep;
 	
 	public function __construct($questions = [])
 	{
 		$this->_questions = $questions;
+		$this->_scoreKeep = new Exam\ScoreKeep();
+		$this->_scoreKeep->setQuestionCount(count($questions));
 	}
 
 	public function present()
 	{
 		if (count($this->_questions) > 0) {
 			shuffle($this->_questions);
-			system('clear');
+			$this->clear();
 			$questionNumber = 1;
 			foreach ($this->_questions as $question) {
 				echo '[' .$questionNumber . '/' . count($this->_questions) . '] ' . $question['question'] . "\r\n";
@@ -36,9 +39,11 @@ class Exam
 
 				if ($choice == $answerChoice) {
 					echo "\r\nCorrect!\r\n";
+					$this->_scoreKeep->correct();
 				} else {
 					echo "\r\nNope. The answer is:";
 					echo "\r\n" . $question['answer'] . "\r\n";
+					$this->_scoreKeep->wrong($question);
 				}	
 				
 				if (isset($question['explain'])) {
@@ -47,7 +52,7 @@ class Exam
 				} else {
 					sleep(2);
 				}
-				system('clear');
+				$this->clear();
 				$questionNumber++;
 			}
 			echo "\r\n And... you're done!\r\n";
@@ -66,5 +71,15 @@ class Exam
 			$shuffled[$key] = $choices[$key];
 		}
 		return $shuffled;
+	}
+
+	protected function quit()
+	{
+		$this->clear();
+	}
+
+	protected function clear()
+	{
+		system('clear');
 	}
 }
