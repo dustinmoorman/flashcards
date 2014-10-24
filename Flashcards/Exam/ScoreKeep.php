@@ -22,4 +22,19 @@ class ScoreKeep
 	{
 		$this->_questionCount++;
 	}
+
+	public function getScore()
+	{
+		return $this->calculatePercentage() 
+			. '%, (' 
+			. $this->_answeredCorrectlyCount
+			. '/'
+			. $this->_questionCount
+			. ')';
+	}
+
+	protected function calculatePercentage()
+	{
+		return round(100 * ($this->_answeredCorrectlyCount / $this->_questionCount),2);
+	}
 }
