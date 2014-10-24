@@ -42,7 +42,6 @@ class Exam
 					echo "\r\nCorrect!\r\n";
 					$this->_scoreKeep->correct();
 				} else {
-					echo "\r\n you chose '" . print_r($choice,1) ."'" ;
 					echo "\r\nNope. The answer is:";
 					echo "\r\n" . $question['answer'] . "\r\n";
 					$this->_scoreKeep->wrong($question);
