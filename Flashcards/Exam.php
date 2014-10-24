@@ -84,7 +84,8 @@ class Exam
 	{
 		$this->clear();
 		echo "Alright you're done.";
-		echo "\r\n [Q]uit, [R]etest missed questions, R[e]view missed questions";
+		echo "\r\n [Q]uit, [R]etest missed questions, R[e]view missed questions\r\n";
+		$this->getUserInput();
 	}
 
 	protected function clear()
