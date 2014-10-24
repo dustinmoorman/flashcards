@@ -80,11 +80,17 @@ class Exam
 		}
 		return $shuffled;
 	}
+	
+	protected function getResults()
+	{
+		echo "You scored " . $this->_scoreKeep->getScore() . "\r\n";
+	}
 
 	protected function quit()
 	{
 		$this->clear();
-		echo "Alright you're done.";
+		echo "Alright you're done.\r\n";
+		$this->getResults();
 		echo "\r\n[Q]uit, [R]etest missed questions, R[e]view missed questions\r\n\r\n";
 		$this->getUserInput();
 	}
