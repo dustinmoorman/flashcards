@@ -38,6 +38,7 @@ class Exam
 				
 				if (trim($choice) == 'q') {
 					$this->quit();
+					return;
 				} else if ($choice == $answerChoice) {
 					echo "\r\nCorrect!\r\n";
 					$this->_scoreKeep->correct();
