@@ -11,7 +11,6 @@ class Exam
 	{
 		$this->_questions = $questions;
 		$this->_scoreKeep = new Exam\ScoreKeep();
-		$this->_scoreKeep->setQuestionCount(count($questions));
 	}
 
 	public function present()
@@ -47,6 +46,8 @@ class Exam
 					echo "\r\n" . $question['answer'] . "\r\n";
 					$this->_scoreKeep->wrong($question);
 				}	
+				
+				$this->_scoreKeep->questionAttempted();				
 				
 				if (isset($question['explain'])) {
 					echo "\r\n" . $question['explain'] . "\r\n";
