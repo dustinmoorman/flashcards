@@ -33,8 +33,7 @@ class Exam
 
 				$choice = '';
 				do {	
-					$stdin = fopen('php://stdin', 'r');
-					$choice = fgets($stdin);
+					$choice = $this->getUserInput();
 				} while (strlen($choice) < 2);
 
 				if ($choice == $answerChoice) {
@@ -82,6 +81,8 @@ class Exam
 	protected function quit()
 	{
 		$this->clear();
+		echo "Alright you're done.";
+		echo "\r\n [Q]uit, [R]etest missed questions, R[e]view missed questions";
 	}
 
 	protected function clear()
