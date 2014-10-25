@@ -37,4 +37,9 @@ class ScoreKeep
 	{
 		return round(100 * ($this->_answeredCorrectlyCount / $this->_questionCount),2);
 	}
+	
+	public function getIncorrectlyAnsweredQuestions()
+	{
+		return $this->_answeredIncorrectly;
+	}
 }
