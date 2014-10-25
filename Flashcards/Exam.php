@@ -92,7 +92,14 @@ class Exam
 		echo "Alright you're done.\r\n";
 		$this->getResults();
 		echo "\r\n[Q]uit, [R]etest missed questions, R[e]view missed questions\r\n\r\n";
-		$this->getUserInput();
+		$choice = $this->getUserInput();
+
+		if (trim($choice) == 'e') {
+			$this->reviewIncorrect($this->_scoreKeep->getIncorrectQuestions);
+		} elseif(trim($choice) == 'R') {
+			$Retest = new Exam($this->_scoreKeep->getIncorrectQuestions);
+			$Retest->present();
+		}
 	}
 
 	protected function clear()
