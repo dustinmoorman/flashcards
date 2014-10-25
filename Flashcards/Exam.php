@@ -95,9 +95,9 @@ class Exam
 		$choice = $this->getUserInput();
 
 		if (trim($choice) == 'e') {
-			$this->reviewIncorrect($this->_scoreKeep->getIncorrectQuestions);
+			$this->reviewIncorrect($this->_scoreKeep->getIncorrectlyAnsweredQuestions());
 		} elseif(trim($choice) == 'R') {
-			$Retest = new Exam($this->_scoreKeep->getIncorrectQuestions);
+			$Retest = new Exam($this->_scoreKeep->getIncorrectlyAnsweredQuestions());
 			$Retest->present();
 		}
 	}
