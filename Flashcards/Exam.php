@@ -33,9 +33,9 @@ class Exam
 				$choice = '';
 				do {	
 					$choice = $this->getUserInput();
-				} while (strlen($choice) < 2);
+				} while (strlen($choice) < 1);
 				
-				if (trim($choice) == 'q') {
+				if ($choice == 'q') {
 					$this->quit();
 					return;
 				} else if ($choice == $answerChoice) {
@@ -65,7 +65,7 @@ class Exam
 	protected function getUserInput()
 	{
 		$stdin = fopen('php://stdin', 'r');
-		return fgets($stdin);
+		return trim(fgets($stdin));
 	}
 	
 	protected function shuffleAnswers($choices)
@@ -94,9 +94,9 @@ class Exam
 		echo "\r\n[Q]uit, [R]etest missed questions, R[e]view missed questions\r\n\r\n";
 		$choice = $this->getUserInput();
 
-		if (trim($choice) == 'e') {
+		if ($choice == 'e') {
 			$this->reviewIncorrect($this->_scoreKeep->getIncorrectlyAnsweredQuestions());
-		} elseif(trim($choice) == 'R' || trim($choice) == 'r') {
+		} elseif($choice == 'R' || $choice == 'r') {
 			$Retest = new Exam($this->_scoreKeep->getIncorrectlyAnsweredQuestions());
 			$Retest->present();
 		}
