@@ -35,6 +35,6 @@ class ScoreKeep
 
 	protected function calculatePercentage()
 	{
-		return round(100 * ($this->_answeredCorrectlyCount / $this->_questionCount),2);
+		return round(100 * ($this->_answeredCorrectlyCount / $this->_questionCount), 2);
 	}
 }
