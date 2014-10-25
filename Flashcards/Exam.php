@@ -109,16 +109,18 @@ class Exam
 
 	protected function reviewIncorrect($questions)
 	{
-		$this->clear();
 		$reviewNumber = 1;
 		$reviewCount = count($questions);
 		foreach ($questions as $question) {
+			$this->clear();
 			echo '[' . $reviewNumber . '/' . $reviewCount . '] ' . $question['question'] . "\r\n\r\n";
 			echo $question['answer'] . "\r\n";
 			if (isset($question['explain'])) {
 				echo $question['explain'];
 			}
  			$this->getUserInput();
+			$reviewNumber++;
 		}
+		$this->quit();
 	}
 }
