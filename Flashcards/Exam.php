@@ -19,6 +19,7 @@ class Exam
 			shuffle($this->_questions);
 			$this->clear();
 			$questionNumber = 1;
+			
 			foreach ($this->_questions as $question) {
 				echo '[' 
 					. $questionNumber 
@@ -84,6 +85,7 @@ class Exam
 		$keys = array_keys($choices);
 		shuffle($keys);
 		$shuffled = array();
+		
 		foreach ($keys as $key) {
 			$shuffled[$key] = $choices[$key];
 		}
