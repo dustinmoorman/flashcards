@@ -20,10 +20,18 @@ class Exam
 			$this->clear();
 			$questionNumber = 1;
 			foreach ($this->_questions as $question) {
-				echo '[' .$questionNumber . '/' . count($this->_questions) . '] ' . $question['question'] . "\r\n";
+				echo '[' 
+					. $questionNumber 
+					. '/' 
+					. count($this->_questions) 
+					. '] ' 
+					. $question['question'] 
+					. "\r\n";
+					
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				$shuffledChoices = $this->shuffleAnswers($choices);
 				$answerNumber = 1;
+				
 				foreach ($shuffledChoices as $k => $choice) {
 					echo "\t$answerNumber.$choice \r\n"; 
 					if ($k === 'answer') $answerChoice = $answerNumber;
@@ -31,6 +39,7 @@ class Exam
 				}
 
 				$choice = '';
+				
 				do {	
 					$choice = $this->getUserInput();
 				} while (strlen($choice) < 1);
@@ -111,10 +120,20 @@ class Exam
 	{
 		$reviewNumber = 1;
 		$reviewCount = count($questions);
+
 		foreach ($questions as $question) {
 			$this->clear();
-			echo '[' . $reviewNumber . '/' . $reviewCount . '] ' . $question['question'] . "\r\n\r\n";
+			
+			echo '[' 
+				. $reviewNumber 
+				. '/' 
+				. $reviewCount 
+				. '] ' 
+				. $question['question'] 
+				. "\r\n\r\n";
+				
 			echo $question['answer'] . "\r\n";
+			
 			if (isset($question['explain'])) {
 				echo $question['explain'];
 			}
