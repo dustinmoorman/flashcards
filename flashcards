@@ -21,7 +21,7 @@ if (isset($argv[1])) {
 		}
 
 		if (count($questions) > 0) {
-			shuffle($questions);
+			\Flashcards\Exam::knuthShuffle($questions);
 			if (isset($argv[2]) 
 				&& is_numeric($argv[2]) 
 				&& $argv[2] < count($questions)) {

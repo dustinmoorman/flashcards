@@ -90,6 +90,14 @@ class Exam
 		}
 		return $shuffled;
 	}
+
+	public static function knuthShuffle(&$array) 
+	{
+		for($i = count($array) - 1; $i > 0; $i--) {
+			$rand = mt_rand(0,$i);
+			list($array[$i], $array[$rand]) = [$array[$rand], $array[$i]];
+		}
+	}
 	
 	protected function getResults()
 	{
