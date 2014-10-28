@@ -16,7 +16,6 @@ class Exam
 	public function present()
 	{
 		if (count($this->_questions) > 0) {
-			shuffle($this->_questions);
 			$this->clear();
 			$questionNumber = 1;
 			
