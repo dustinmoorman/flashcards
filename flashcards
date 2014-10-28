@@ -21,7 +21,10 @@ if (isset($argv[1])) {
 		}
 
 		if (count($questions) > 0) {
-			
+			if (isset($argv[2]) && is_numeric($argv[2]) && $argv[2] < count($questions)) {
+				$sliceBy = count($questions) - $argv[2];
+				$questions = array_slice($questions, $sliceBy);
+			} 			
 			$Exam = new \Flashcards\Exam($questions);
 			$Exam->present();
 
