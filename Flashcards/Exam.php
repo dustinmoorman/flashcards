@@ -133,7 +133,7 @@ class Exam
 
 	protected function getTime()
 	{
-
+		return gmdate("H:i:s", Exam\Timer::stop());
 	}
 
 	protected function reviewIncorrect($questions)
