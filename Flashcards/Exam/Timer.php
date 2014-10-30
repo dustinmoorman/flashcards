@@ -9,12 +9,13 @@ class Timer
 	public static function start()
 	{
 		list($usec, $sec) = self::getTime();
-		$mtime = (float) $sec + (float) $usec;
+		self::$time = (float) $sec + (float) $usec;
 	}
 
 	public static function stop()
 	{
-		
+		list($usec, $sec) = self::getTime();
+		return round(((float) $sec + (float) $usec) - self::$time, 2); 
 	}
 
 	public static function reset()
