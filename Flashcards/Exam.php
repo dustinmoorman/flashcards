@@ -105,7 +105,7 @@ class Exam
 	{
 		echo "You scored " 
 			. $this->_scoreKeep->getScore() 
-			. " in "
+			. " with a time of "
 			. $this->getTime()
 			. "\r\n";
 	}
