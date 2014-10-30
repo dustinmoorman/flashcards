@@ -9,7 +9,7 @@ class Timer
 	public static function start()
 	{
 		list($usec, $sec) = self::getTime();
-		$mtime =  $sec + $usec;
+		$mtime = (float) $sec + (float) $usec;
 	}
 
 	public static function stop()
