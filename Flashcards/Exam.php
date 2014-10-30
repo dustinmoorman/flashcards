@@ -18,7 +18,9 @@ class Exam
 		if (count($this->_questions) > 0) {
 			$this->clear();
 			$questionNumber = 1;
-			
+
+			Exam\Timer::start();			
+
 			foreach ($this->_questions as $question) {
 				echo '[' 
 					. $questionNumber 
@@ -101,7 +103,11 @@ class Exam
 	
 	protected function getResults()
 	{
-		echo "You scored " . $this->_scoreKeep->getScore() . "\r\n";
+		echo "You scored " 
+			. $this->_scoreKeep->getScore() 
+			. " in "
+			. $this->getTime()
+			. "\r\n";
 	}
 
 	protected function quit()
@@ -123,6 +129,11 @@ class Exam
 	protected function clear()
 	{
 		system('clear');
+	}
+
+	protected function getTime()
+	{
+
 	}
 
 	protected function reviewIncorrect($questions)
