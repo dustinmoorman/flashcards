@@ -128,7 +128,7 @@ class Exam
 
 	protected function clear()
 	{
-		system('clear');
+		PHP_SHLIB_SUFFIX == 'dll' ? system('cls') : system('clear');
 	}
 
 	protected function getTime()
