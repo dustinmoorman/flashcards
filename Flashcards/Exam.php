@@ -62,7 +62,7 @@ class Exam
 				
 				if (isset($question['explain'])) {
 					echo "\r\n" . $question['explain'] . "\r\n";
-					sleep(3);
+					sleep(4);
 				} else {
 					sleep(2);
 				}
