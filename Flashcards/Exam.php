@@ -103,9 +103,9 @@ class Exam
 	
 	protected function getResults()
 	{
-		echo "You scored " 
+		echo 'You scored ' 
 			. $this->_scoreKeep->getScore() 
-			. " with a time of "
+			. ' with a time of '
 			. $this->getTime()
 			. "\r\n";
 	}
