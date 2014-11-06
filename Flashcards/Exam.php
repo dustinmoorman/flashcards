@@ -123,7 +123,9 @@ class Exam
 		} elseif($choice == 'R' || $choice == 'r') {
 			$Retest = new Exam($this->_scoreKeep->getIncorrectlyAnsweredQuestions());
 			$Retest->present();
-		}
+		} else {
+            $this->clear();
+        }
 	}
 
 	protected function clear()
