@@ -44,7 +44,7 @@ class Exam
 				
 				do {	
 					$choice = $this->getUserInput();
-				} while (strlen($choice) < 1);
+				} while (strlen($choice) != 1);
 				
 				if ($choice == 'q') {
 					$this->quit();
