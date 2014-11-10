@@ -44,7 +44,7 @@ class Exam
 				
 				do {	
 					$choice = $this->getUserInput();
-				} while (strlen($choice) != 1);
+				} while (strlen($choice) != 1 || !preg_match("/([1-9]|q)/i", $choice));
 				
 				if ($choice == 'q') {
 					$this->quit();
