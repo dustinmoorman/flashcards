@@ -40,6 +40,7 @@ class Exam
 					$answerNumber++;	
 				}
 
+                echo "\r\n";
 				$choice = '';
 				
 				do {	
