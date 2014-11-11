@@ -75,6 +75,7 @@ class Exam
 
 	protected function getUserInput()
 	{
+        echo '$ ';
 		$stdin = fopen('php://stdin', 'r');
 		return trim(fgets($stdin));
 	}
