@@ -40,7 +40,7 @@ class Exam
 					$answerNumber++;	
 				}
 
-                echo "\r\n";
+                		echo "\r\n";
 				$choice = '';
 				
 				do {	
@@ -76,7 +76,7 @@ class Exam
 
 	protected function getUserInput()
 	{
-        echo '$ ';
+        	echo '$ ';
 		$stdin = fopen('php://stdin', 'r');
 		return trim(fgets($stdin));
 	}
