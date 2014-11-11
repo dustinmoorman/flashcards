@@ -28,7 +28,7 @@ class Exam
 					. count($this->_questions) 
 					. '] ' 
 					. $question['question'] 
-					. "\r\n";
+					. "\r\n\r\n";
 					
 				$choices = array_merge(['answer' => $question['answer']], $question['incorrect']);
 				$shuffledChoices = $this->shuffleAnswers($choices);
