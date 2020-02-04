@@ -35,7 +35,7 @@ class Exam
 				$answerNumber = 1;
 				
 				foreach ($shuffledChoices as $k => $choice) {
-					echo "\t$answerNumber.$choice \r\n"; 
+					echo "\t$answerNumber. $choice \r\n"; 
 					if ($k === 'answer') $answerChoice = $answerNumber;
 					$answerNumber++;	
 				}
@@ -63,7 +63,8 @@ class Exam
 				
 				if (isset($question['explain'])) {
 					echo "\r\n" . $question['explain'] . "\r\n";
-					sleep(4);
+					echo "\r\nPress enter to continue...";
+					$this->getUserInput();
 				} else {
 					sleep(2);
 				}
