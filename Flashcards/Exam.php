@@ -68,16 +68,18 @@ class Exam
 				} else {
 					sleep(2);
 				}
+
 				$this->clear();
 				$questionNumber++;
 			}
+
 			$this->quit();
 		}
 	}
 
 	protected function getUserInput()
 	{
-        	echo '$ ';
+		echo '$ ';
 		$stdin = fopen('php://stdin', 'r');
 		return trim(fgets($stdin));
 	}
@@ -98,7 +100,7 @@ class Exam
 
 	public static function knuthShuffle(&$array) 
 	{
-		for($i = count($array) - 1; $i > 0; $i--) {
+		for ($i = count($array) - 1; $i > 0; $i--) {
 			$rand = mt_rand(0,$i);
 			list($array[$i], $array[$rand]) = [$array[$rand], $array[$i]];
 		}
@@ -127,8 +129,8 @@ class Exam
 			$Retest = new Exam($this->_scoreKeep->getIncorrectlyAnsweredQuestions());
 			$Retest->present();
 		} else {
-            $this->clear();
-        }
+			$this->clear();
+		}
 	}
 
 	protected function clear()
@@ -162,9 +164,11 @@ class Exam
 			if (isset($question['explain'])) {
 				echo $question['explain'];
 			}
- 			$this->getUserInput();
+
+			$this->getUserInput();
 			$reviewNumber++;
 		}
+
 		$this->quit();
 	}
 }
