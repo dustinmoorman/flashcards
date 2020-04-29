@@ -6,6 +6,7 @@ class Exam
 {
 	protected $_questions = [];
 	protected $_scoreKeep;
+	const ALL_OF_THE_ABOVE = 'All of the above';
 	
 	public function __construct($questions = [])
 	{
@@ -86,6 +87,11 @@ class Exam
 	
 	protected function shuffleAnswers($choices)
 	{
+		$allOfTheAboveKey = false;
+		if (($allOfTheAboveKey = array_search(self::ALL_OF_THE_ABOVE, $choices)) !== false) {
+			unset($choices[$allOfTheAboveKey]);
+			}
+
 		if (!is_array($choices)) return $choices;
 
 		$keys = array_keys($choices);
@@ -95,6 +101,11 @@ class Exam
 		foreach ($keys as $key) {
 			$shuffled[$key] = $choices[$key];
 		}
+
+		if (false !== $allOfTheAboveKey) {
+			$shuffled[$allOfTheAboveKey] = self::ALL_OF_THE_ABOVE;
+		}
+
 		return $shuffled;
 	}
 
