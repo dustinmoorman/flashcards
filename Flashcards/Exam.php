@@ -90,7 +90,7 @@ class Exam
 		$allOfTheAboveKey = false;
 		if (($allOfTheAboveKey = array_search(self::ALL_OF_THE_ABOVE, $choices)) !== false) {
 			unset($choices[$allOfTheAboveKey]);
-			}
+		}
 
 		if (!is_array($choices)) return $choices;
 
